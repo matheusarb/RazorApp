@@ -7,7 +7,7 @@ namespace MyRazorApp.Pages
     {
         public List<Category> Categories { get; set; } = new();
 
-        public void OnGet(int skip, int take)
+        public void OnGet(int skip=0, int take=25)
         {
             // não temos acesso à variáveis de dentro do método Get
             //await Task.Delay(1000);
