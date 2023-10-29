@@ -4,30 +4,4 @@
     Layout = "Shared/_Layout";
 }
 
-<html>
-    <head>
-        <title>Index</title>
-    </head>
-    
-    <body>
-        <div>
-            
-            <table>
-                <thead>
-                    
-                </thead>
-                <tbody>
-                @foreach(var category in Model.Categories)
-                {
-                    <tr>
-                        <td>@category.id</td>
-                        <td>@category.Title</td>
-                        <td>@category.Price.ToString("C", new CultureInfo("en-Us"))</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
-
-        </div>
-    </body>
-</html>
+<h1>Home</h1>

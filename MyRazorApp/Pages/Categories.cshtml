@@ -1,0 +1,17 @@
+﻿@page "/categorias"
+@model MyRazorApp.Pages.CategoriesModel
+
+<table>
+    <thead>
+    </thead>
+    <tbody>
+        @foreach (var category in Model.Categories)
+        {
+            <tr>
+                <td>@category.id</td>
+                <td>@category.Title</td>
+                <td>@category.Price.ToString("C", new CultureInfo("en-Us"))</td>
+            </tr>
+        }
+    </tbody>
+</table>
