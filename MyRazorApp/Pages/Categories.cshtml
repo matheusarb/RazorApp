@@ -1,5 +1,8 @@
-﻿@page "/categorias"
+﻿@page "~/categorias/{skip}/{take}"
 @model MyRazorApp.Pages.CategoriesModel
+@{
+    ViewData["Title"] = "Categorias";
+}
 
 <table>
     <thead>

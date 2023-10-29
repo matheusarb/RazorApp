@@ -7,20 +7,21 @@ namespace MyRazorApp.Pages
     {
         public List<Category> Categories { get; set; } = new();
 
-        public void OnGet()
+        public void OnGet(int skip, int take)
         {
             // não temos acesso à variáveis de dentro do método Get
             //await Task.Delay(1000);
-            
+
+            var temp = new List<Category>();
             for (int i = 0; i <= 100; i++)
             {
-                Categories.Add(
+                temp.Add(
                     new Category(
                     id: i,
                     Title: $"Categoria {i}",
                     Price: i * 18.95m));
             }
-            
+            Categories = temp.Skip(skip).Take(take).ToList();
         }
 
         public record Category(
